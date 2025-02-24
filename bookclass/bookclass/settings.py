@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'classes',         # Your custom app for managing class bookings
     'rest_framework',  # Django REST framework for API endpoints
     'corsheaders',     # To allow cross-origin requests from your React frontend
+    'django_extensions', # To allow for shell_plus  -- to show urls of the project
 ]
 
 MIDDLEWARE = [
@@ -44,6 +45,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',  # Make sure this comes after CorsMiddleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Whitenoise for serving static files
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -107,6 +109,8 @@ USE_TZ = True
 
 # Static files settings
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Note: If you're serving your React build from Django, make sure the build exists.
 # Otherwise, you might get warnings about the path below.

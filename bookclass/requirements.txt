@@ -5,3 +5,4 @@ djangorestframework-simplejwt==5.2.2  # For JWT authentication
 psycopg2==2.9.6  # If you're using PostgreSQL as your database
 mysqlclient==2.1.0  # If you're using MySQL as your database
 django-cors-headers==3.13.0  # For handling CORS headers in your
+django-extensions

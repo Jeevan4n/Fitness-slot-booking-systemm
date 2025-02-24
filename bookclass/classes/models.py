@@ -20,6 +20,9 @@ class Class(models.Model):
     def __str__(self):
         return f"{self.class_type} class on {self.date.strftime('%Y-%m-%d %H:%M')}"
 
+
+
+
 class Booking(models.Model):
     name = models.CharField(max_length=100, default="")  # Optional: store user's name
     user_id = models.CharField(max_length=100)  # Consider linking to a User model in production
