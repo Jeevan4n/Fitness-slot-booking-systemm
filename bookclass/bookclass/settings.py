@@ -23,7 +23,7 @@ SECRET_KEY = 'trmgbdim3z^hzcg3r6*-l1lm%fs$&7!7pz(8x3zbv=jdgim47e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://fitness-slot-booking-systemm.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
